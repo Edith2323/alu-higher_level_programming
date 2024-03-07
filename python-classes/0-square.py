@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Create an Empty Square """
+        Square = __import__('0-square').Square
 
-class Square:
-    ''' creates an empty square'''
-    pass
+        my_square = Square()
+        print(type(my_square))
+        print(my_square.__dict__)
