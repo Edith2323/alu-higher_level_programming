@@ -1,3 +1,2 @@
--- lists all the tables in my SQL database
-SHOW TABLES;
-~            
+-- show all the tables in a databse
+SHOW tables;
