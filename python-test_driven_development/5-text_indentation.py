@@ -1,23 +1,15 @@
->>> text_indentation = __import__('5-text_indentation').text_indentation
+#!/usr/bin/python3
+"""A function to sperate words in python"""
 
->>> text_indentation()
-Traceback (most recent call last):
-TypeError: text_indentation() missing 1 required positional argument: 'text'
 
->>> text_indentation("Holberton. School? How are you: John")
-Holberton.
-<BLANKLINE>
-School?
-<BLANKLINE>
-How are you:
-<BLANKLINE>
-John
+def text_indentation(text):
+    '''Fucntion to bring the texts'''
+    if type(text) != str:
+        raise TypeError("text must be a string")
 
->>> text_indentation(2)
-Traceback (most recent call last):
-TypeError: text must be a string
+    for delim in ".:?":
+        text = (delim + "\n\n").join(
+            [line.strip(" ") for line in text.split(delim)]
+        )
 
->>> text_indentation("Aptech. School")
-Aptech.
-<BLANKLINE>
-School
+    print("{}".format(text), end="")
